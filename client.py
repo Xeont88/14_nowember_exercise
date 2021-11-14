@@ -1,9 +1,10 @@
 import socket
 
-server_address = ('localhost', 5400)
+# server_address = ('localhost', 5400)
+server_address = ('192.168.2.12', 5400)
 
 while True:
-    msg = input('-')
+    msg = input('> ')
     bin_msg = bytes(msg, 'utf-8')
 
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

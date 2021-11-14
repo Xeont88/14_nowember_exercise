@@ -16,7 +16,6 @@ def some_handler(msg):
         connection.send('Всегда пожалуйста!'.encode('utf-8'))
 
 
-
 while True:
     connection, address = sockobj.accept()  # ждем сообщение от клиента, устонавливаем соединение с клиентом, получаем ip адрес
 
@@ -28,7 +27,7 @@ while True:
 
     ip_addr = address[0]  # ip адрес
 
-    print("Я получил сообщение:", str_data, '\n\n',)
+    print("Я получил сообщение:", str_data, ip_addr, '\n\n',)
 
     some_handler(str_data)
 
