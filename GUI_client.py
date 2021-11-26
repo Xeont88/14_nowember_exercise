@@ -5,22 +5,22 @@ from socket import *
 class Client(Tk):
     def __init__(self):
         super().__init__()
-        self.config(bg='lightgrey')
+        self.config(bg='#111111')
         self.geometry('500x300')
-        self.dialog_win = Text(self, width=40, height=15)
+        self.dialog_win = Text(self, width=40, height=15, background='darkgray', font='bold')
         self.dialog_win.place(x=5, y=5)
-        self.msg_space = Entry(self, width=35)
+        self.msg_space = Entry(self, width=35, bg='darkgray')
         self.msg_space.place(x=5, y=260)
-        self.send_btn = Button(self, text='Отправить',
+        self.send_btn = Button(self, text='Отправить', bg='orange',
                                command=self.put_msg)
         self.send_btn.place(y=258, x=250)
         # self.socket_settings()
         self.server_address_lbl = Label(text='ip адрес сервера:',
-                                        bg='lightgrey')
+                                        bg='#111111', fg='orange')
         self.server_address_lbl.place(x=340, y=15)
-        self.server_address_entry = Entry()
+        self.server_address_entry = Entry(background='darkgray')
         self.server_address_entry.place(x=342, y=45)
-        self.server_address_btn = Button(text='Установить',
+        self.server_address_btn = Button(text='Установить', bg='orange',
                                          command=self.set_server_address)
         self.server_address_btn.place(x=395, y=75)
 
