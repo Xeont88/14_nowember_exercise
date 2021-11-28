@@ -7,7 +7,7 @@ class Client(Tk):
         super().__init__()
         self.config(bg='#111111')
         self.geometry('500x300')
-        self.dialog_win = Text(self, width=40, height=15, background='darkgray', font='bold')
+        self.dialog_win = Text(self, width=40, height=15, background='darkgray')
         self.dialog_win.place(x=5, y=5)
         self.msg_space = Entry(self, width=35, bg='darkgray')
         self.msg_space.place(x=5, y=260)
