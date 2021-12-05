@@ -36,6 +36,7 @@ class Client(Tk):
     def put_msg(self):
         text = self.msg_space.get()
         self.send_msg(text)
+        self.msg_space.delete(0, END)
 
     def send_msg(self, msg):
         bin_msg = bytes(msg, 'utf-8')
